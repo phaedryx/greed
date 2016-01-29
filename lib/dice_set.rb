@@ -1,5 +1,13 @@
 class DiceSet
   def roll(number=5)
-    [6]
+    @values = Array.new(number){rand(6) + 1}
+  end
+
+  def values
+    @values
+  end
+
+  def score
+    
   end
 end

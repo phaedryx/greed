@@ -13,7 +13,7 @@ describe DiceSet do
 
   describe "#roll" do
     it "must return a set of dice rolls" do
-      @dice_set.roll.must_be_kind_of Array
+      @dice_set.roll.must_be_kind_of(Array)
     end
 
     it "must have dice values between 1 and 6 inclusively" do
@@ -24,4 +24,15 @@ describe DiceSet do
       @dice_set.roll.size.must_equal 5
     end
   end
+
+  describe "#values" do
+    before do 
+      @dice_set.roll
+    end
+
+    it "must have dice values between 1 and 6 inclusively" do
+      @dice_set.roll.select {|die| die < 1 || die > 6}.must_be_empty
+    end
+  end
 end
+
