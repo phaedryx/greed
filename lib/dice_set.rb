@@ -11,13 +11,5 @@ class DiceSet
   end
 
   def score
-    
-  end
-
-  def values
-
-  end
-
-  def score
   end
 end
