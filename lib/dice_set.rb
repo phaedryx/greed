@@ -7,6 +7,9 @@ class DiceSet
     @values
   end
 
+  def values=(new_values)
+  end
+
   def score
     
   end
