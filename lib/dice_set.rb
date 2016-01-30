@@ -8,6 +8,5 @@ class DiceSet
   end
 
   def score
-    
   end
 end
