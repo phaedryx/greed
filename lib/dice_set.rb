@@ -1,5 +1,5 @@
 class DiceSet
-  def roll(number=5)
+  def roll number=5
     @values = Array.new(number){rand(6) + 1}
   end
 
@@ -7,7 +7,9 @@ class DiceSet
     @values
   end
 
-  def values=(new_values)
+  def values= new_values
+    raise ArgumentError unless new_values.kind_of?(Array)
+    
   end
 
   def score
