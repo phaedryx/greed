@@ -1,4 +1,9 @@
 class DiceSet
+  
+  def initialize
+    @values = []
+  end
+
   def roll number=5
     @values = Array.new(number){rand(6) + 1}
   end
