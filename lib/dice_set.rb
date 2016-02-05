@@ -14,9 +14,10 @@ class DiceSet
 
   def values= new_values
     raise ArgumentError unless new_values.kind_of?(Array)
-    
+    @values = new_values
   end
 
   def score
+    
   end
 end
