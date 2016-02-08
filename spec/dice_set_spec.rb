@@ -46,7 +46,7 @@ describe DiceSet do
     it "must not allow invalid values" do
       ->{ @dice_set.values = [7] }.must_raise(ArgumentError)
       ->{ @dice_set.values = [0] }.must_raise(ArgumentError)
-      ->{ @dice_set.values = [nil] }.must_raise(ArgumentError)
+      ->{ @dice_set.values = [1, nil, 2] }.must_raise(ArgumentError)
     end
 
     it "must set the values to the given array values" do
